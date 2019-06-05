@@ -1,0 +1,146 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 9.488 ns
+From           : SRAM_DQ[13]
+To             : VGA_Controller:u8|Cur_Color_G[7]
+From Clock     : --
+To Clock       : OSC_27
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 17.192 ns
+From           : I2C_AV_Config:u10|I2C_Controller:u0|SD_COUNTER[0]
+To             : I2C_SCLK
+From Clock     : OSC_50
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 7.610 ns
+From           : DPDT_SW[1]
+To             : AUD_DACDAT
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 0.955 ns
+From           : TDI
+To             : USB_JTAG:u1|JTAG_REC:u0|rDATA[7]
+From Clock     : --
+To Clock       : OSC_50
+Failed Paths   : 0
+
+Type           : Clock Setup: 'OSC_50'
+Slack          : 1.307 ns
+Required Time  : 50.00 MHz ( period = 20.000 ns )
+Actual Time    : N/A
+From           : Multi_Sdram:u3|Sdram_Controller:u1|mDONE
+To             : Multi_Sdram:u3|Sdram_Controller:u1|DONE
+From Clock     : Multi_Sdram:u3|Sdram_Controller:u1|PLL1:sdram_pll1|altpll:altpll_component|_clk0
+To Clock       : OSC_50
+Failed Paths   : 0
+
+Type           : Clock Setup: 'Multi_Sdram:u3|Sdram_Controller:u1|PLL1:sdram_pll1|altpll:altpll_component|_clk0'
+Slack          : 11.733 ns
+Required Time  : 50.00 MHz ( period = 20.000 ns )
+Actual Time    : N/A
+From           : CMD_Decode:u5|oSDR_Select[1]
+To             : Multi_Sdram:u3|Sdram_Controller:u1|ST[0]
+From Clock     : OSC_50
+To Clock       : Multi_Sdram:u3|Sdram_Controller:u1|PLL1:sdram_pll1|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Clock Setup: 'VGA_Audio_PLL:p1|altpll:altpll_component|_clk1'
+Slack          : 25.908 ns
+Required Time  : 18.00 MHz ( period = 55.555 ns )
+Actual Time    : 267.38 MHz ( period = 3.740 ns )
+From           : AUDIO_DAC:u11|FLASH_Cont[0]
+To             : AUDIO_DAC:u11|FLASH_Out_Tmp[0]
+From Clock     : VGA_Audio_PLL:p1|altpll:altpll_component|_clk1
+To Clock       : VGA_Audio_PLL:p1|altpll:altpll_component|_clk1
+Failed Paths   : 0
+
+Type           : Clock Setup: 'VGA_Audio_PLL:p1|altpll:altpll_component|_clk0'
+Slack          : 28.598 ns
+Required Time  : 25.20 MHz ( period = 39.682 ns )
+Actual Time    : 90.22 MHz ( period = 11.084 ns )
+From           : VGA_OSD_RAM:u9|Img_RAM:u0|altsyncram:altsyncram_component|altsyncram_q7o1:auto_generated|altsyncram_p132:altsyncram1|out_address_reg_a[1]
+To             : VGA_OSD_RAM:u9|oRed[9]
+From Clock     : VGA_Audio_PLL:p1|altpll:altpll_component|_clk0
+To Clock       : VGA_Audio_PLL:p1|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Clock Setup: 'TCK'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 220.22 MHz ( period = 4.541 ns )
+From           : USB_JTAG:u1|JTAG_TRANS:u1|rCont[1]
+To             : USB_JTAG:u1|JTAG_TRANS:u1|TDO
+From Clock     : TCK
+To Clock       : TCK
+Failed Paths   : 0
+
+Type           : Clock Hold: 'OSC_50'
+Slack          : -3.276 ns
+Required Time  : 50.00 MHz ( period = 20.000 ns )
+Actual Time    : N/A
+From           : I2C_AV_Config:u10|LUT_INDEX[5]
+To             : I2C_AV_Config:u10|mI2C_DATA[22]
+From Clock     : OSC_50
+To Clock       : OSC_50
+Failed Paths   : 110
+
+Type           : Clock Hold: 'Multi_Sdram:u3|Sdram_Controller:u1|PLL1:sdram_pll1|altpll:altpll_component|_clk0'
+Slack          : 0.391 ns
+Required Time  : 50.00 MHz ( period = 20.000 ns )
+Actual Time    : N/A
+From           : Multi_Sdram:u3|Sdram_Controller:u1|Read
+To             : Multi_Sdram:u3|Sdram_Controller:u1|Read
+From Clock     : Multi_Sdram:u3|Sdram_Controller:u1|PLL1:sdram_pll1|altpll:altpll_component|_clk0
+To Clock       : Multi_Sdram:u3|Sdram_Controller:u1|PLL1:sdram_pll1|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Clock Hold: 'VGA_Audio_PLL:p1|altpll:altpll_component|_clk0'
+Slack          : 0.391 ns
+Required Time  : 25.20 MHz ( period = 39.682 ns )
+Actual Time    : N/A
+From           : VGA_Controller:u8|oVGA_V_SYNC
+To             : VGA_Controller:u8|oVGA_V_SYNC
+From Clock     : VGA_Audio_PLL:p1|altpll:altpll_component|_clk0
+To Clock       : VGA_Audio_PLL:p1|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Clock Hold: 'VGA_Audio_PLL:p1|altpll:altpll_component|_clk1'
+Slack          : 0.391 ns
+Required Time  : 18.00 MHz ( period = 55.555 ns )
+Actual Time    : N/A
+From           : AUDIO_DAC:u11|SEL_Cont[3]
+To             : AUDIO_DAC:u11|SEL_Cont[3]
+From Clock     : VGA_Audio_PLL:p1|altpll:altpll_component|_clk1
+To Clock       : VGA_Audio_PLL:p1|altpll:altpll_component|_clk1
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 110
+
+--------------------------------------------------------------------------------------
+

@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sat May 28 14:54:20 2011
+Quartus II Version : 10.1 Build 197 01/19/2011 SP 1 SJ Web Edition
+Revision Name : DE2_USB_API
+Top-level Entity Name : DE2_USB_API
+Family : Cyclone II
+Device : EP2C35F672C6
+Timing Models : Final
+Total logic elements : 23,399 / 33,216 ( 70 % )
+    Total combinational functions : 21,942 / 33,216 ( 66 % )
+    Dedicated logic registers : 17,076 / 33,216 ( 51 % )
+Total registers : 17076
+Total pins : 425 / 475 ( 89 % )
+Total virtual pins : 0
+Total memory bits : 16,384 / 483,840 ( 3 % )
+Embedded Multiplier 9-bit elements : 70 / 70 ( 100 % )
+Total PLLs : 0 / 4 ( 0 % )
